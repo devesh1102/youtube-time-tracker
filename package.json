@@ -1,0 +1,30 @@
+{
+  "name": "youtube-time-tracker",
+  "version": "1.0.0",
+  "description": "A Chrome Extension that automatically tracks your YouTube usage — time spent, videos watched, and daily limits.",
+  "author": "devesh1102",
+  "license": "MIT",
+  "keywords": [
+    "chrome-extension",
+    "youtube",
+    "time-tracker",
+    "productivity",
+    "screen-time",
+    "manifest-v3"
+  ],
+  "homepage": "https://github.com/devesh1102/youtube-time-tracker",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/devesh1102/youtube-time-tracker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/devesh1102/youtube-time-tracker/issues"
+  },
+  "engines": {
+    "chrome": ">=88"
+  },
+  "scripts": {
+    "zip": "powershell Compress-Archive -Path manifest.json,background.js,content.js,popup.html,popup.js,popup.css,icons -DestinationPath youtube-time-tracker.zip -Force"
+  },
+  "devDependencies": {}
+}

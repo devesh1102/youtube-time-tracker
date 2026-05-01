@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YouTube Time Tracker</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <span class="logo">▶</span>
+      <h1>YouTube Tracker</h1>
+    </header>
+
+    <section class="stats">
+      <div class="stat-card">
+        <span class="stat-value" id="timeSpent">0m 0s</span>
+        <span class="stat-label">Time Today</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-value" id="videoCount">0</span>
+        <span class="stat-label">Videos Watched</span>
+      </div>
+    </section>
+
+    <section class="progress-section">
+      <div class="progress-header">
+        <span id="progressLabel">0 / 60 min</span>
+        <span id="progressPercent">0%</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+    </section>
+
+    <section class="videos-section">
+      <h2>Videos Watched</h2>
+      <ul id="videoList">
+        <li class="empty">No videos watched yet today.</li>
+      </ul>
+    </section>
+
+    <section class="settings-section">
+      <h2>Daily Limit</h2>
+      <div class="settings-row">
+        <input type="number" id="limitInput" min="1" max="1440" placeholder="60" />
+        <span>minutes</span>
+        <button id="saveLimit">Save</button>
+      </div>
+      <p class="save-msg" id="saveMsg"></p>
+    </section>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

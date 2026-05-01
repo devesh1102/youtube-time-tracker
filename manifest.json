@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Time Tracker",
+  "version": "1.0",
+  "description": "Track your YouTube usage — time spent, videos watched, and daily limits.",
+  "permissions": ["storage", "notifications", "tabs"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "YouTube Time Tracker"
+  }
+}
